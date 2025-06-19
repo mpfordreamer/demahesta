@@ -397,6 +397,13 @@ body.offcanvas {
       padding-top: 5em;
       padding-bottom: 8em; } }
 
+@media screen and (max-width: 768px) {
+
+  .colorlib-contact > .colorlib-narrow-content > .row > .col-md-5 {
+    margin-bottom: 3em !important; 
+  }
+}
+
 .author-img {
   background-size: cover;
   background-position: center center;
@@ -1090,7 +1097,7 @@ body.offcanvas {
     display: -moz-inline-stack;
     display: inline-block;
     zoom: 1;
-    *display: inline; }
+    display: inline; }
     .colorlib-social li a {
       font-size: 22px;
       color: #000;
@@ -1098,7 +1105,7 @@ body.offcanvas {
       display: -moz-inline-stack;
       display: inline-block;
       zoom: 1;
-      *display: inline;
+      display: inline;
       -webkit-border-radius: 7px;
       -moz-border-radius: 7px;
       -ms-border-radius: 7px;
@@ -1314,7 +1321,7 @@ body.offcanvas {
     display: -moz-inline-stack;
     display: inline-block;
     zoom: 1;
-    *display: inline;
+    /* display: inline; */
     width: 30px;
     height: 2px;
     color: #000;
@@ -1702,16 +1709,13 @@ body.offcanvas {
     transition: all 0.3s ease;
 }
 
-/* Mobile responsiveness
 @media screen and (max-width: 768px) {
-    .dark-mode #colorlib-hero .flexslider .slider-text-inner .desc h1 {
-        font-size: 28px;
-    }
-    
-    .dark-mode #colorlib-hero .flexslider .slider-text-inner .desc h2 {
-        font-size: 18px;
-    }
-} */
+  #colorlib-hero .flexslider .slider-text > .slider-text-inner {
+    display: block; 
+    vertical-align: top; 
+    padding-top: 16em; 
+  }
+}
 
 /* Background image adjustments for dark mode */
 .dark-mode #colorlib-hero .flexslider .slides li[style*="background-image"] {
