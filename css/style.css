@@ -1435,14 +1435,6 @@ body.offcanvas {
 .js .animate-box {
   opacity: 0; }
 
-/* Floating theme toggle button */
-.theme-toggle-float {
-    position: fixed;
-    bottom: 30px;
-    right: 30px;
-    z-index: 999;
-}
-
 .theme-toggle-btn {
     width: 50px;
     height: 50px;
@@ -2161,4 +2153,44 @@ body.offcanvas {
 	content: "+";
 	font-weight: bold;
 	margin-left: 2px;
+}
+
+/* Voiceflow Chatbot Positioning */
+#vfchat {
+    bottom: 30px !important; /* Position below theme toggle button */
+    right: 20px !important;
+    z-index: 9997 !important; 
+}
+
+/* Ensure theme toggle stays on top and positioned correctly */
+.theme-toggle-float {
+    position: fixed;
+    z-index: 9999 !important;
+    bottom: 80px !important; 
+    right: 18px !important;
+}
+
+/* Responsive adjustments for both elements */
+@media screen and (max-width: 768px) {
+    #vfchat {
+        bottom: 25px !important;
+        right: 20px !important;
+    }
+    
+    .theme-toggle-float {
+        bottom: 80px !important;
+        right: 18px !important;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    #vfchat {
+        bottom: 20px !important;
+        right: 20px !important;
+    }
+    
+    .theme-toggle-float {
+        bottom: 80px !important;
+        right: 18px !important;
+    }
 }

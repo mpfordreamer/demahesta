@@ -563,7 +563,7 @@
 								<div class="desc">
 									<span><small>May 2025</small> | <small>AI Agent</small></span>
 									<h3><a href="blog.html">Bali Sukla AI Agent</a></h3>
-									<p>This project builds an AI agent to handle customer service for Bali Sukla’s website and company profile. It leverages Retrieval-Augmented Generation (RAG) to enable the chatbot.</p>
+									<p>This project builds an AI agent to handle customer service for Bali Sukla's website and company profile. It leverages Retrieval-Augmented Generation (RAG) to enable the chatbot.</p>
 								</div>
 							</div>
 						</div>
@@ -755,6 +755,40 @@ Copyright <script>document.write(new Date().getFullYear());</script> All rights 
 		</button>
 	</div>
 
+	<!-- Voiceflow Chatbot -->
+	<script type="text/javascript">
+		(function(d, t) {
+			var v = d.createElement(t), s = d.getElementsByTagName(t)[0];
+			v.onload = function() {
+			  try {
+				window.voiceflow.chat.load({
+				  verify: { projectID: '685e48050319d1df09567e62' },
+				  url: 'https://general-runtime.voiceflow.com',
+				  versionID: 'production',
+				  voice: {
+					url: "https://runtime-api.voiceflow.com"
+				  },
+				  // Disable audio worklet to prevent errors
+				  audio: {
+					enabled: false
+				  },
+				  // Add session configuration
+				  session: {
+					userID: 'user_' + Math.random().toString(36).substr(2, 9)
+				  }
+				});
+			  } catch (error) {
+				console.warn('Voiceflow chat initialization error:', error);
+			  }
+			}
+			v.onerror = function() {
+			  console.warn('Failed to load Voiceflow widget');
+			}
+			v.src = "https://cdn.voiceflow.com/widget-next/bundle.mjs"; 
+			v.type = "text/javascript"; 
+			s.parentNode.insertBefore(v, s);
+		})(document, 'script');
+	</script>
 	</body>
 </html>
 
