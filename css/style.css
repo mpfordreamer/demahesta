@@ -2157,6 +2157,7 @@ body.offcanvas {
 
 /* Voiceflow Chatbot Positioning */
 #vfchat {
+    position: fixed !important;
     bottom: 30px !important; /* Position below theme toggle button */
     right: 20px !important;
     z-index: 9997 !important; 
